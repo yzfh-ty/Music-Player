@@ -7,7 +7,7 @@ module.exports = {
     jquery: './js/jquery.js'
   },
   output: {
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'
   },
   module: {
