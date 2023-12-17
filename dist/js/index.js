@@ -3,6 +3,19 @@ var musicList = [];
 // 声明变量，保存当前播放的是哪一首歌曲
 var currentIndex = 0;
 
+function playAudio(src) {
+  const audio = new Audio(src);
+  audio.addEventListener('canplaythrough', function() {
+    audio.play();
+  });
+}
+
+// 获取按钮元素并添加点击事件监听器
+const button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+  playAudio('audio.mp3');
+});
+
 // 1. 加载音乐列表信息
 $.ajax({
   type: "GET",
